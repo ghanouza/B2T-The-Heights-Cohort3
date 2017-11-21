@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<h1 id="fruits" style="color: blue;"></h1>
+	<button onclick="myFunction()">add more fruits </button>
+
+	<script type="text/javascript">
+		var fruits = ['apple','orange','kiwi'];
+		var fruits = ["apple", "Orange", "kiwi"];
+        document.getElementById("fruits").innerHTML = fruits.toString();
+		document.getElementById('fruits').innerHTML = "i still need to get "+ fruits.join(" with ");
+       
+		var input = prompt('add more fruits');
+
+		console.log(fruits.push(input)); 
+		
+		console.log(fruits);
+
+		
+		
+		
+		function myFunction() {
+	    fruits.push("");
+	    document.getElementById("fruits").innerHTML = fruits;
+	    document.getElementById("fruits").style.color = "green";
+	    document.getElementById("fruits").style.fontFamily = "Arial";
+        document.getElementById("fruits").style.fontSize = "xx-larger";
+                 }
+
+
+	
+
+	
+	
+
+	</script>
+
+</body>
+</html>
