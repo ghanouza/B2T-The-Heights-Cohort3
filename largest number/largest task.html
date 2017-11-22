@@ -5,30 +5,27 @@
 	</head>
 	<body>
 		<script type="text/javascript">
-			var a = 10;
-			    b = 20;
-			    c = 30
+			var a, b, c;
 
 			
 			var a = prompt('enter a number');
+			var b = prompt('enter a number');
+			var c = prompt('enter a number');
 
-			if (parseInt(a) >= b && a>=c){
+			if (a >= b && a>=c){
 				
 				console.log("largest number is : "+ a);
 
 			}
-
-			var b = prompt('enter a number');
-			if(parseInt(b) >=a && b>=c) {
+			else if( b>=c ) {
 				console.log("largest number is : "+ b);
 
-			}
-			var c = prompt('enter a number');
-			if (parseInt(c) >= a && c>=b);
+			}else 
+			
+		
 			 {
 				console.log('largest number is : ' + c);
 			}
-
 
 		</script>
 
