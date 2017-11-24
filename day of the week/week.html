@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>week days</title>
+	</head>
+	<body>
+		<p id="demo" style="color: red;"></p>
+		<script type="text/javascript">
+			var n = prompt("Enter a number between 0 and 6");
+			
+
+			switch (new Date().getDay()) {
+			    case(n=0):
+			        console.log("Sunday");
+			        break;
+			    case (n=1):
+			        console.log("Monday");
+			        break;
+			    case (n=2):
+			        console.log("Tuesday");
+			        break;
+			    case (n=3):
+			        console.log("Wednesday");
+			        break;
+			    case (n=4):
+			        console.log("Thursday");
+			        break;
+			    case (n=5):
+			        console.log("Friday");
+			        break;
+			    case (n=6):
+			        console.log("Saturday");
+			        break;
+			        default:
+			}
+			// to display todays day of the week.
+				var d = new Date();
+			    var weekday = new Array(7);
+			    weekday[0] = "Sunday";
+			    weekday[1] = "Monday";
+			    weekday[2] = "Tuesday";
+			    weekday[3] = "Wednesday";
+			    weekday[4] = "Thursday";
+			    weekday[5] = "Friday";
+			    weekday[6] = "Saturday";
+			     var n = weekday[d.getDay()];
+			   
+			    document.getElementById("demo").innerHTML ="welcome to my page today is " + n;
+
+			        
+		</script>
+		
+
+	</body>
+</html>
