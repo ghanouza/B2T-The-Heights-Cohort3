@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+		<html>
+		<head>
+			<title></title>
+		</head>
+		<body>
+			<table id="myTable" border="1">
+
+				<tr>
+					<td>Clifford</td>
+					<td>Harris</td>
+				</tr>
+				
+			
+			  
+			 
+				
+			</table><br>
+			
+			<input type="button" onclick="insertRow('dataTable')" value="insert row">
+			<script type="text/javascript">
+				function insertRow(myTable){
+                  var tbl = document.getElementById('myTable');
+                  var lastRow = tbl.rows.length;
+  
+                   var iteration = lastRow;
+                   var row = tbl.insertRow(lastRow);
+  
+  
+                   var cellLeft = row.insertCell();
+                   var textNode = document.createTextNode(iteration);
+                   cellLeft.appendChild(textNode);
+  
+  
+                    var cellRight = row.insertCell();
+  
+  
+ 
+ 
+}
+
+  
+
+      
+    
+  
+
+
+				
+
+
+
+		
+			
+
+
+		
+			
+				
+			
+		
+
+	
+
+			</script>
+
+		</body>
+</html>
