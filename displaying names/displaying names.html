@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+	<html>
+	<head>
+		<title></title>
+	</head>
+	<body>
+		<p id="display"></p>
+		<form>
+		
+		<input type="text" id="fname" value="curtis" id="fname" >
+		<input type="text" id="lname" value="jackson" id="lname">
+		<input type="button" value="submit" onclick="getFormValue()">
+		</form>
+		
+
+		
+		<script type="text/javascript">
+			function makePerson (){
+		       var person = {
+				fname : 'curtis',
+				lname : 'jackson' ,
+			
+			};
+			return person;
+		}
+		var person = makePerson();
+
+		function getFormValue(){
+			var fname = document.getElementById('fname').value;
+			var lname = document.getElementById( 'lname').value;
+			var person = makePerson(fname, lname);
+			console.log("hello " + person.fname  + " "+  person.lname);
+			document.write("hello " + person.fname  + " "+  person.lname);
+		}
+		
+		
+		</script>
+
+	</body>
+</html>
