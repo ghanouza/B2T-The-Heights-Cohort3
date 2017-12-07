@@ -5,28 +5,23 @@
 	</head>
 	<body>
 		<script type="text/javascript">
-			var a, b, c;
-
 			
-			var a = prompt('enter a number');
-			var b = prompt('enter a number');
-			var c = prompt('enter a number');
-
-			if (a >= b && a>=c){
+			
+			var a = parseInt(prompt('enter a number'));
+			var b = parseInt(prompt('enter a number'));
+			var c = parseInt(prompt('enter a number'));
+			if (a > b && a > c){
 				
-				console.log("largest number is : "+ a);
-
+				console.log("largest number is : " + a);
 			}
-			else if( b>=c ) {
-				console.log("largest number is : "+ b);
-
+			else if(parseInt (b > c )) {
+				console.log("largest number is : " + b);
 			}else 
 			
 		
 			 {
 				console.log('largest number is : ' + c);
 			}
-
 		</script>
 
 	</body>
