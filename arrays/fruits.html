@@ -8,26 +8,31 @@
 	<button onclick="myFunction()">add more fruits </button>
 
 	<script type="text/javascript">
-		var fruits = ['apple','orange','kiwi'];
+	
 		var fruits = ["apple", "Orange", "kiwi"];
         document.getElementById("fruits").innerHTML = fruits.toString();
 		document.getElementById('fruits').innerHTML = "i still need to get "+ fruits.join(" with ");
        
 		var input = prompt('add more fruits');
 
-		console.log(fruits.push(input)); 
-		
-		console.log(fruits);
+	
 
 		
 		
 		
 		function myFunction() {
-	    fruits.push("");
+	    fruits.push(prompt());
 	    document.getElementById("fruits").innerHTML = fruits;
 	    document.getElementById("fruits").style.color = "green";
 	    document.getElementById("fruits").style.fontFamily = "Arial";
         document.getElementById("fruits").style.fontSize = "xx-larger";
+        
+        document.getElementById("fruits").innerHTML = fruits.join(" with ");
+        console.log(fruits);
+        console.log(fruits.push(input)); 
+        
+
+		
                  }
 
 
