@@ -11,21 +11,36 @@
 			
 			
 			var color = ["Blue ", "Green", "Red", "Orange", "Violet", "Indigo", "Yellow "];
+			
+			var o = ["th","st","nd","rd"];
 
-			function Ordinal(n)
-			 {
-			 var o = ["th","st","nd","rd"],
-			 x = n%100;
-			 return x+(o[(x-20)%10]||o[x]||o[0]);
-			 }
+			
+            function Ordinal(i) 
+            {
+            	var o = ["th","st","nd","rd"];
+             
+                   n= i%100;
+               return n+(o[(n-20)%10]||o[n]||o[0]);
+                           }
 
-			for(n = 0; n < color.length; n++){
-			 var ordinal = n + 1;
+			for (var i= 0; i< color.length; i++){
 
-			 var output = (Ordinal(ordinal) + " choice is " + color[n] + ".");
+				var ordinal = i+1;
+				
+			
+	
 
-			console.log(output);
-			}
+			 var output =(Ordinal(ordinal) + " choice is " + color[i] + ".");
+			 console.log(output);
+
+			 
+			 
+
+
+
+			
+		}
+			
 
 
 
