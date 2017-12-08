@@ -1,68 +1,79 @@
 <!DOCTYPE html>
 		<html>
 		<head>
-			<title></title>
+			<title>appending a table </title>
+			<script type="text/javascript">
+
+
+				function insertRow()
+				{
+					// get input values
+
+					var fname = document.getElementById('fname').value;
+						var lname =document.getElementById('lname').value;
+
+
+						// get the html table 
+						
+
+						
+
+
+          var table = document.getElementsByTagName('table')[0];
+
+
+
+							var newRow = table.insertRow (table.rows.length);
+
+
+							var cel1 = newRow.insertCell (0);
+							var cel2 = newRow.insertCell (1);
+							
+
+
+
+							cel1.innerHTML = fname;
+							cel2.innerHTML = lname;
+
+
+				}
+
+				
+
+
+
+			</script>
+
+
+
+
 		</head>
 		<body>
-			<table id="myTable" border="1">
 
-				<tr>
-					<td>Clifford</td>
-					<td>Harris</td>
-				</tr>
+
+			Column 1 : <input type="text" id="fname" name="fname"/><br><br/>
+			Column 2: <input type="text" id="lname" name="lname"/><br/><br/>
+			
+			<input type="button" onclick="insertRow()" value="insert row"><br/><br/>
+
+		<table id="myTable" border="1">
+			<tr>
+				<td></td>
+				<td></td>
+			</tr>
+			
+		
+
+	
 				
 			
 			  
 			 
 				
-			</table><br>
 			
-			<input type="button" onclick="insertRow('dataTable')" value="insert row">
-			<script type="text/javascript">
-				function insertRow(myTable){
-                  var tbl = document.getElementById('myTable');
-                  var lastRow = tbl.rows.length;
-  
-                   var iteration = lastRow;
-                   var row = tbl.insertRow(lastRow);
-  
-  
-                   var cellLeft = row.insertCell();
-                   var textNode = document.createTextNode(iteration);
-                   cellLeft.appendChild(textNode);
-  
-  
-                    var cellRight = row.insertCell();
-  
-  
- 
- 
-}
-
-  
-
-      
-    
-  
-
-
-				
-
-
-
-		
 			
+		</table><br>
 
-
-		
 			
-				
-			
-		
-
-	
-
-			</script>
-
 		</body>
 </html>
