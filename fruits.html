@@ -4,39 +4,33 @@
 	<title></title>
 </head>
 <body>
-	<h1 id="fruits" style="color: blue;"></h1>
+	<h1 id="fruits" style="color: green; font-family: Arial;">apple with Orange with kiwi with kaka with moka</h1>
 	<button onclick="myFunction()">add more fruits </button>
 
 	<script type="text/javascript">
-		var fruits = ['apple','orange','kiwi'];
+	
 		var fruits = ["apple", "Orange", "kiwi"];
-        document.getElementById("fruits").innerHTML = fruits.toString();
-		document.getElementById('fruits').innerHTML = "i still need to get "+ fruits.join(" with ");
        
-		var input = prompt('add more fruits');
-
-		console.log(fruits.push(input)); 
-		
-		console.log(fruits);
-
-		
+		document.getElementById('fruits').innerHTML = "i still need to get more fruits "
 		
 		
 		function myFunction() {
-	    fruits.push("");
-	    document.getElementById("fruits").innerHTML = fruits;
+	    
 	    document.getElementById("fruits").style.color = "green";
 	    document.getElementById("fruits").style.fontFamily = "Arial";
         document.getElementById("fruits").style.fontSize = "xx-larger";
+        fruits.push(prompt("add more fruits"));
+        document.getElementById("fruits").innerHTML = fruits.join(" with ");;
+        console.log(fruits);
+       
+        
+        
+		
                  }
-
-
-	
-
 	
 	
-
+	
 	</script>
 
-</body>
-</html>
+
+</body></html>
