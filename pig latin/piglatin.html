@@ -1,43 +1,69 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
-	<head>
-		<title></title>
+<head>
+	<title></title>
+
+	<script type="text/javascript">
+
+
+			
+
+		function isVowel(char) {
+			return ['a', 'e', 'i', 'o', 'u'].indexOf(char) != -1;
+		}
+		function consonant(input) {
+			i = 0;
+			while (!isVowel(input.charAt(i)))
+				i++;
+			return input.substring(i) + input.substring(0, i) + "ay";
+		}
+		function vowel(input) {
+			if (input.charAt(input.length - 1) == 's')
+				return input.substring(0, input.length -1) + "ays";
+			return input + "ay";
+		}
+		function wordProcessor(input) {
+			if (isVowel(input.charAt(0)))
+				return vowel(input);
+			else
+				return consonant(input);
+		}
+		var input= prompt("give me a word");
+		console.log(input);
+		function toPigLatin(form) {
+			
+			form.input.value = input;
+			endInput = "";
+			for (var i = 0; input.length > 0; i++) {
+				if (input[i] == null || input[i] == " ") {
+					endInput += wordProcessor(input.substring(0, i)) + " ";
+					if (input[i] == " ")
+						input =  input.substring(i + 1);
+					else
+						input = input.substring(i);
+					i = -1;
+				}
+				if (input.length == 1) {
+					endInput += wordProcessor(input);
+					input = "";
+				}
+			}
+			form.input.value = endInput;
+		}
+	</script>
+</head>
+
+<body>
+	<h2 id="input"></h2>
+	
+	<form name="input">
 		
-	</head>
-	<body style="background-color: green;">
-		<h1 id="word"></h1>
-		<h2 id="apple"></h2>
-		<h3 id="ppleaway"></h3>
-		
-		<script type="text/javascript">
-			
-			document.getElementById("word").innerHTML = 'my word is';
-			
+		<input name="submit_text" type="button" onclick="toPigLatin(this.form)" value="Translate"><br>
+		<p>click button to translate</p>
+		<textarea readonly="" name="input" value="Submit text to translate above."></textarea>
+	</form>
 
+	
 
-			
-			var input= prompt ("what's your favorite fruit?");
-			console.log(input);
-			document.getElementById
-			document.getElementById("apple").innerHTML = 'apple';
-
-			// piglatin
-			var word= 'apple';
-			console.log(word);
-			console.log(word.slice(1)+word.charAt(0)+("way"));
-
-
-            document.getElementById("ppleaway").innerHTML ="ppleaway";
-			var input= prompt ("what's your pig latin?");
-			console.log(input);
-			document.getElementById
-			document.getElementById("apple").innerHTML = 'apple';
-
-
-
-
-
-		</script>
-
-	</body>
+</body>
 </html>
